@@ -9,7 +9,7 @@ const Navigator = () => {
   console.log(user, 'user===');
   return (
     <NavigationContainer>
-      {true ? <HomeStack /> : <AuthStack />}
+      {user ? <HomeStack /> : <AuthStack />}
     </NavigationContainer>
   );
 };
