@@ -31,6 +31,7 @@ function* loginUser(action) {
     });
     if (response.ok) {
       const user = yield response.json();
+      console.log(user, 'user from saga');
       yield put(loginSuccess(user));
     } else {
       const error = yield response.text();

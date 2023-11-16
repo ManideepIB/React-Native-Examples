@@ -7,8 +7,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
-import {fetchWeather} from '../../redux/action/weatherActions';
+
 import {deviceHeight, deviceWidth} from '../../utils/Dimensions';
 import {fetchClimate} from '../../redux/action/climateActions';
 import {DataItem, useFetchData} from '../../components/CustomHooks';

@@ -6,19 +6,19 @@ import {deviceHeight, deviceWidth} from '../../utils/Dimensions';
 import {DataItem, useFetchData} from '../../components/CustomHooks';
 
 const WeatherData = ({cityName}) => {
-  const {data: weatherData} = useFetchData(
-    cityName,
-    state => state.weather.weatherData,
-    fetchWeather,
-  );
+  //   const {data: weatherData} = useFetchData(
+  //     cityName,
+  //     state => state.weather.weatherData,
+  //     fetchWeather,
+  //   );
   // const {weatherData} = useWeatherData(cityName);
-  // const dispatch = useDispatch();
-  // const weatherData = useSelector(state => state.weather.weatherData);
-  // console.log(weatherData, 'weatherdata from screen************');
+  const dispatch = useDispatch();
+  const weatherData = useSelector(state => state.weather.weatherData);
+  console.log(weatherData, 'weatherdata from screen************');
 
-  // useEffect(() => {
-  //   dispatch(fetchWeather(cityName));
-  // }, [dispatch, cityName]);
+  useEffect(() => {
+    dispatch(fetchWeather(cityName));
+  }, [dispatch, cityName]);
 
   return (
     <View>
